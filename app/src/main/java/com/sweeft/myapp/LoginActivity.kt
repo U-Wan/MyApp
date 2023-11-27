@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
             return when (item.itemId) {
                 android.R.id.home -> {
-                    val intent = Intent(applicationContext, SplashScreenSecond::class.java)
+                    val intent = Intent(applicationContext, OnboardingActivity::class.java)
                     startActivity(intent)
                     true
                 }
