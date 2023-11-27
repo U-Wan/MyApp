@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.MyApp" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="Theme.MyApp" parent="Base.Theme.MyApp" />
+    <style name="MyButtonStyle" parent="Widget.AppCompat.Button"/>
+
+    <style name="actionBar" parent="Theme.AppCompat.Light">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:inputType">textCapWords</item>
+
+    </style>
+
+</resources>
+

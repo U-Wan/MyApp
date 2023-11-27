@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenSecond">
+
+    <ImageView
+        android:id="@+id/wallet_8_1"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:background="@drawable/creditcards"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:textColor="#ffff"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:stateListAnimator="@null"
+        android:textAllCaps="false"
+
+    android:background="@drawable/button_style2"
+        app:layout_constraintEnd_toEndOf="@+id/wallet_8_1"
+        app:layout_constraintStart_toStartOf="@+id/wallet_8_1"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_8_1" />
+
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/button_style1"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/orange1"
+        android:stateListAnimator="@null"
+
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_terms_and_conditions"
+        android:layout_width="318dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="@string/tv_text1"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"
+        app:layout_constraintVertical_bias="0.861" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
