@@ -18,7 +18,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/actionBar" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".OnboardingActivity"

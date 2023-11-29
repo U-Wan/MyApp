@@ -4,12 +4,16 @@
     </style>
 
     <style name="Theme.MyApp" parent="Base.Theme.MyApp" />
+<!--
     <style name="MyButtonStyle" parent="Widget.AppCompat.Button"/>
+-->
 
 
     <style name="actionBar" parent="Theme.AppCompat.Light">
         <item name="android:textAllCaps">false</item>
+        <item name="colorPrimary">#F44336</item>
         <item name="android:textColorHint">@color/hint_color</item>
+        <item name="backgroundColor">@color/menu_color</item>
         <item name="android:inputType">textCapWords</item>
 
     </style>

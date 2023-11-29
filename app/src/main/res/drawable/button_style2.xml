@@ -14,11 +14,11 @@
         </shape>
     </item>
 
-    <!-- Default state -->
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="20dp" />
-            <solid android:color="@color/orange1" /> <!-- Default color -->
+            <solid android:color="@color/orange1" />
         </shape>
     </item>
+
 </selector>

@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                 actionBar.setHomeAsUpIndicator(R.drawable.baseline_arrow_back)
                 title = ""
                 supportActionBar?.elevation = 0F
-                supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.white)))
+                supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.menu_color)))
                 actionBar.setDisplayHomeAsUpEnabled(true)
             }
 
@@ -50,11 +50,7 @@ class LoginActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(charSequence: CharSequence, start: Int, before: Int, count: Int) {
-                val isLoginPhoneNotEmpty = binding.etLoginPhone.text?.isNotEmpty() == true
-                val isPasswordNotEmpty = binding.etPassword.text?.isNotEmpty() == true
-
-                binding.btnLogin.isEnabled = isLoginPhoneNotEmpty && isPasswordNotEmpty
-
+               updateButtonColor()
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -69,20 +65,32 @@ class LoginActivity : AppCompatActivity() {
                     val passContainsUppercase = password.any { it.isUpperCase() }
 
                     if (!passContainsNumber || !passContainsUppercase || password.length < 9) {
-                        binding.etPassword.error = "Invalid password"
+                        binding.passwordLayout.error = "Invalid password"
                     }
-                    else{ binding.etLoginPhone.error = null
+                    else{ binding.passwordLayout.error = null
                     }
                 }
 
                 if(phoneNumber.length<9){
-                    binding.etLoginPhone.error = "Invalid phone number"
+                    binding.layoutLoginPhone.error = "Invalid phone number"
                 }
-                else{ binding.etLoginPhone.error = null
+                else{ binding.layoutLoginPhone.error = null
                 }
             }
         }
 
+    private fun updateButtonColor() {
+        val isLoginPhoneNotEmpty = binding.etLoginPhone.text?.isNotEmpty() == true
+        val isPasswordNotEmpty = binding.etPassword.text?.isNotEmpty() == true
+
+        binding.btnLogin.isEnabled = isLoginPhoneNotEmpty && isPasswordNotEmpty
+
+        if (isLoginPhoneNotEmpty && isPasswordNotEmpty) {
+            binding.btnLogin.setBackgroundColor(ContextCompat.getColor(this, R.color.orange1))
+        } else {
+            binding.btnLogin.setBackgroundColor(ContextCompat.getColor(this, R.color.orange3))
+        }
+    }
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
             return when (item.itemId) {
                 android.R.id.home -> {
